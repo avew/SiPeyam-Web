@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Jenis Penyakit</title>
+        <title>Form gejala</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -82,20 +82,23 @@
             <?php include './menu.php'; ?>
             <!-- Begin page content -->
             <div class="container">
-                <a href="form_insert_penyakit.php"><button class="btn btn-primary"><i class="icon-tasks icon-white"></i>Tambah</button></a>
-                <center><h4>Data Jenis Penyakit</h4></center>
-            
-                     <!-- Data gejala penyakit -->
-                    <?php include './data_penyakit.php'; ?>
-                      <!-- Akhir gejala penyakit -->
+                <div class="page-header">
+                    <h3>Tambah Jenis Penyakit</h3>
+                </div>
+                <form class="well span6" action="insert_penyakit.php" method="post">
+                    <label>Nama Jenis Penyakit</label>
+                    <input type="text" name="nama_penyakit" class="span3" placeholder="Masukan nama jenis penyakit..."/><br>
+                    <input type="text" name="nama_latin" class="span3" placeholder="Masukan nama  latin jenis penyakit..."/><br>
+                    <button class="btn btn-primary" type="submit">Tambah</button>
+                    <a href="jenis_penyakit.php"><button class="btn btn-danger" type="button">Kembali</button></a>
+                </form>
             </div>
-
             <div id="push"></div>
         </div>
-
+        
+        <!-- begin footer -->
         <?php include './footer.php'; ?>
-
-
+        <!-- end footer-->
         <script src="assets/js/bootstrap.js"></script>
     </body>
 </html>

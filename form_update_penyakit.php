@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<?php include './confg/koneksi.php'; ?>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Jenis Penyakit</title>
+        <title>Form gejala</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -68,6 +69,12 @@
         </style>
         <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="../assets/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
@@ -82,20 +89,33 @@
             <?php include './menu.php'; ?>
             <!-- Begin page content -->
             <div class="container">
-                <a href="form_insert_penyakit.php"><button class="btn btn-primary"><i class="icon-tasks icon-white"></i>Tambah</button></a>
-                <center><h4>Data Jenis Penyakit</h4></center>
-            
-                     <!-- Data gejala penyakit -->
-                    <?php include './data_penyakit.php'; ?>
-                      <!-- Akhir gejala penyakit -->
-            </div>
+                <div class="page-header">
+                    <h3>Update Jenis Penyakit</h3>
+                </div>
+                <?php
+                include './confg/koneksi.php';
+                $id = $_GET['id_penyakit'];
+                $select = "SELECT * FROM tb_penyakit where id_penyakit='$id'";
+                $query_select = mysql_query($select);
+                while ($data = mysql_fetch_array($query_select)) {
+                    echo "<form class=\"well span6\" action=\"update_penyakit.php\" method=\"post\">
+                    <label>Nama Gejala</label>
+                    <input type=\"hidden\" name=\"id_penyakit\" class=\"span3\"\ value=\"$data[id_gejala]\" \">
+                    <input type=\"text\" name=\"nama_penyakit\" class=\"span3\"\ value=\"$data[nama_penyakit]\" \"><br>
+                    <input type=\"text\" name=\"nama_latin\" class=\"span3\"\ value=\"$data[nama_latin]\" \"><br>
+                    <button class = \"btn btn-primary\" type = \"submit\">Update</button>
+                    <a href = \"gejala.php\"><button class = \"btn btn-danger\" type = \"button\">Kembali</button></a>
+                    </form>";
+                }
+                ?>
 
+            </div>
             <div id="push"></div>
         </div>
 
+        <!-- begin footer -->
         <?php include './footer.php'; ?>
-
-
+        <!-- end footer-->
         <script src="assets/js/bootstrap.js"></script>
     </body>
 </html>
