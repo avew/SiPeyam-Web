@@ -1,3 +1,4 @@
+<?php include './cek.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -83,10 +84,10 @@
             <!-- Begin page content -->
             <div class="container">
                 <center><h3>Sistem Pakar Penyakit Ayam</h3>
-                <p><img src="assets/img/ayam.jpg" class="img-rounded"></p></center>
+                    <p><img src="assets/img/ayam.jpg" class="img-rounded"></p></center>
                 Di indonesia Ayam adalah termasuk unggas 
-        yang dimanfaatkan secara komersial,
-        baik dalam lingkup makromaupun mikro,karena mempunyai nilai ekonomi yang tinggi terutama pemanfaatan dari daging dan telurnya.meskipun demikian banyak dari para peternak yang memelihara ayam tersebut masih sangat minim pengetahuannya tentang hal-hal yang berkaitan langsung apa yang menjadi mata pencahariannya itu terutama masalah penyakit dan penangulangannya ,dan berikut adalah beberapa jenis daftar penyakit yang sering menjangkit ayam dinegri ini.
+                yang dimanfaatkan secara komersial,
+                baik dalam lingkup makromaupun mikro,karena mempunyai nilai ekonomi yang tinggi terutama pemanfaatan dari daging dan telurnya.meskipun demikian banyak dari para peternak yang memelihara ayam tersebut masih sangat minim pengetahuannya tentang hal-hal yang berkaitan langsung apa yang menjadi mata pencahariannya itu terutama masalah penyakit dan penangulangannya ,dan berikut adalah beberapa jenis daftar penyakit yang sering menjangkit ayam dinegri ini.
                 <p>Bisa anda unduh di sini<a href="#"> SiPeyam Android</a></p>
             </div>
 

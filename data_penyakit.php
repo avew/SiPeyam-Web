@@ -4,6 +4,7 @@
             <th>ID PENYAKIT</th>
             <th>NAMA PENYAKIT</th>
             <th>NAMA LATIN</th>
+            <th>INFO PENYAKIT</th>
             <th>AKSI</th>
         </tr>
         <?php
@@ -25,10 +26,12 @@
 
         //$no = $posisi + 1; // Agar angka (penomoran) mengikuti paging
         while ($data = mysql_fetch_array($hasil)) {
+            $potong = substr($data[info_penyakit],0,80);
             echo "<tr>
                 <td>$data[id_penyakit]</td>
                 <td>$data[nama_penyakit]</td>
                 <td>$data[nama_latin]</td>
+                <td>$potong</td>
                 <td><a href=\"form_update_penyakit.php?id_penyakit=" . $data[id_penyakit] . "\"><button class=\"btn btn-primary\"><i class=\"icon-edit icon-white\"></i>Edit</button>
                 <a href=\"delete_penyakit.php?id_penyakit=" . $data[id_penyakit] . "\"><button class=\"btn btn-danger\"><i class=\"icon-trash icon-white\"></i>Hapus</button></a>
             </tr>";
@@ -36,8 +39,8 @@
         }
         echo "</table>";
         //Langkah 3: Hitung total data dan halaman serta link 1,2,3 ...
+        
 
-        $file = "gejala.php";
 
         $tampil2 = "select * from tb_penyakit";
         $hasil2 = mysql_query($tampil2);

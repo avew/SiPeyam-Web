@@ -89,13 +89,14 @@
                     <label>Nama Jenis Penyakit</label>
                     <input type="text" name="nama_penyakit" class="span3" placeholder="Masukan nama jenis penyakit..."/><br>
                     <input type="text" name="nama_latin" class="span3" placeholder="Masukan nama  latin jenis penyakit..."/><br>
+                    <textarea name="info_penyakit" rows="10" cols="20" placeholder="Masukan info penyakit" ></textarea><br>
                     <button class="btn btn-primary" type="submit">Tambah</button>
                     <a href="jenis_penyakit.php"><button class="btn btn-danger" type="button">Kembali</button></a>
                 </form>
             </div>
             <div id="push"></div>
         </div>
-        
+
         <!-- begin footer -->
         <?php include './footer.php'; ?>
         <!-- end footer-->

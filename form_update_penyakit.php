@@ -69,12 +69,6 @@
         </style>
         <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
 
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-          <script src="../assets/js/html5shiv.js"></script>
-        <![endif]-->
-
-        <!-- Fav and touch icons -->
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
@@ -103,8 +97,9 @@
                     <input type=\"hidden\" name=\"id_penyakit\" class=\"span3\"\ value=\"$data[id_gejala]\" \">
                     <input type=\"text\" name=\"nama_penyakit\" class=\"span3\"\ value=\"$data[nama_penyakit]\" \"><br>
                     <input type=\"text\" name=\"nama_latin\" class=\"span3\"\ value=\"$data[nama_latin]\" \"><br>
+                    <textarea name=\"info_penyakit\" rows=\"10\">$data[info_penyakit]</textarea><br>
                     <button class = \"btn btn-primary\" type = \"submit\">Update</button>
-                    <a href = \"gejala.php\"><button class = \"btn btn-danger\" type = \"button\">Kembali</button></a>
+                    <a href = \"penyakit.php\"><button class = \"btn btn-danger\" type = \"button\">Kembali</button></a>
                     </form>";
                 }
                 ?>

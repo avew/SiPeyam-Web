@@ -11,9 +11,10 @@
                 <ul class="nav">
                     <li class="divider-vertical"></li>
                     <li><a href="index.php"><i class="icon-home icon-white"></i> Home</a></li>
-                    <li><a href="jenis_penyakit.php"><i class="icon-book icon-white"></i> Jenis Penyakit</a></li>
+                    <li><a href="penyakit.php"><i class="icon-book icon-white"></i> Jenis Penyakit</a></li>
                     <li><a href="gejala.php"><i class="icon-time icon-white"></i> Gejala Penyakit</a></li>
                     <li><a href="kontak.php"><i class="icon-time icon-white"></i> Kontak</a></li>
+                    <li><a href="logout.php"><i class="icon-user icon-white"></i> Logout</a></li>
                 </ul>
             </div>
         </div>

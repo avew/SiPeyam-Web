@@ -1,3 +1,4 @@
+<?php include './cek.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
